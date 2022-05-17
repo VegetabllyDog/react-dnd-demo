@@ -9,4 +9,5 @@
 1. npm start
 
 效果预览：
-https://raw.githubusercontent.com/VegetabllyDog/react-dnd-demo/main/src/4234234234.gif
+![image](https://raw.githubusercontent.com/VegetabllyDog/react-dnd-demo/main/src/4234234234.gif)
+

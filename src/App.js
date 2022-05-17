@@ -36,6 +36,14 @@ function App() {
         return
       }
 
+      let repet = theMainBoxModules.filter(ttem=>{ // 也可能是其中的自由拖动，不小心触发，需要过滤
+        return ttem.uuid === item.uuid
+      }).length
+      if(repet){
+        console.log('其中的自由拖动，不小心触发，需要过滤，不做这个新增处理')
+        return
+      }
+
       // console.log('minoter=', minoter)
       setTheMainBoxModules(theMainBoxModules.concat(item))
     }
@@ -70,7 +78,7 @@ function App() {
     console.log(move_I, target_I)
     // target之后插入，并删除原始move
 
-    if (!move_I) { // 纯新增模式
+    if (!move_I && move_I !== 0) { // 纯新增模式
       listData.splice(target_I, 0, moveItem)
 
     } else { // 移动排序模式
